@@ -40,9 +40,12 @@ const addCar = async (req: Request, res: Response) => {
 
 /**
  *
- * @param req
- * @param res
- * @returns
+ * @description get all cars
+ *
+ * @param {Request} req request
+ * @param {Response} res response
+ *
+ * @returns {Response} endpoint response
  */
 const getCars = (req: Request, res: Response) => {
   return Car.find()
@@ -58,7 +61,15 @@ const getCars = (req: Request, res: Response) => {
     )
     .catch((error) => res.status(500).json({ error }));
 };
-
+/**
+ * 
+ * @description update rentatCar status
+ *
+ * @param {Request} req request
+ * @param {Response} res response
+ *
+ * @returns {Response} endpoint response
+ */
 const UpdateRentalCar = async (req: Request, res: Response) => {
   const registration = req.params.registration;
   if (!registration) {
@@ -77,7 +88,15 @@ const UpdateRentalCar = async (req: Request, res: Response) => {
     )
     .catch((error) => res.status(500).json({ error }));
 };
-
+/**
+ * 
+ * @description return a car 
+ *
+ * @param {Request} req request
+ * @param {Response} res response
+ *
+ * @returns {Response} endpoint response
+ */
 const ReturnRentalCar = async (req: Request, res: Response) => {
   const registration = req.params.registration;
   if (!registration) {
