@@ -69,7 +69,7 @@ const UpdateRentalCar = async (req: Request, res: Response) => {
     return res.status(400).json({ message: "Car doesn't exist" });
   }
   if (existingCar.rentalStatus) {
-    return res.status(304).json({ message: "Car already rented" });
+    return res.status(400).json({ message: "Car already rented" });
   }
   return Car.updateOne({ registration }, { $set: { rentalStatus: true } })
     .then(() =>
