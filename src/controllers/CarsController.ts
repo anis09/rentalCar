@@ -62,7 +62,7 @@ const getCars = (req: Request, res: Response) => {
     .catch((error) => res.status(500).json({ error }));
 };
 /**
- * 
+ *
  * @description update rentatCar status
  *
  * @param {Request} req request
@@ -89,8 +89,8 @@ const UpdateRentalCar = async (req: Request, res: Response) => {
     .catch((error) => res.status(500).json({ error }));
 };
 /**
- * 
- * @description return a car 
+ *
+ * @description return a car
  *
  * @param {Request} req request
  * @param {Response} res response
