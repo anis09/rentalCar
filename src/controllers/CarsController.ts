@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import mongoose from "mongoose";
 import Car from "../models/CarModel";
 
 /**
@@ -10,7 +9,7 @@ import Car from "../models/CarModel";
  *
  * @returns {Response} endpoint response
  */
-const addCar = async (req: Request, res: Response) => {
+export const addCar = async (req: Request, res: Response) => {
   const { model, registration, mileAge } = req.body;
   if (!model) {
     return res.status(400).json({ message: "Please specify car model" });

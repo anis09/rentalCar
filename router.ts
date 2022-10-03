@@ -3,7 +3,7 @@ import http from "http";
 import carRoutes from "./src/routes/CarRoutes";
 import { config } from "./src/config/config";
 
-const router = express();
+export const router = express();
 export const StartServer = () => {
   router.use(express.urlencoded({ extended: true }));
   router.use(express.json());
